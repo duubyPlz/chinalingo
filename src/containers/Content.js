@@ -6,7 +6,6 @@ import Chinese from '../components/Chinese';
 import vocabList from '../assets/vocab.json';
 
 const Content = ({isQuestion, dataPath}) => {
-  
   const flatten = (list) => {
     return list.map((lesson) => {
       // in this lesson, concat
@@ -18,21 +17,25 @@ const Content = ({isQuestion, dataPath}) => {
     });
   };
 
-  const flattenedList = flatten(vocabList);
+  // const flattenedList = flatten(vocabList);
+
+  // choose a random word from list
+  const currentWord = "\u518d\u898b";
+  // const currentWord = "hello hi this is ";
 
   // Presentational fork:
   // if isquestion return either Audio or english or both
   if (isQuestion) {
     return (
       <>
-        <Audio vocabList={vocabList} />
+        <Audio word={currentWord} />
       </>
     );
   } else {
     // else is answer - return chinese
     return (
       <>
-        <Chinese vocabList={vocabList} />
+        <Chinese word={currentWord} />
       </>
     );
   }
