@@ -26,6 +26,11 @@ class App extends React.Component {
     window.addEventListener('click', this.handleClick);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.handleKeyPress);
+    window.removeEventListener('click', this.handleClick);
+  }
+
   toggleIsQuestion = () => {
     this.setState({
       isQuestion: !this.state.isQuestion
