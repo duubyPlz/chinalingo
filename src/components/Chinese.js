@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Chinese = ({vocabList}) => {
-  // use vocabList as a hash to lookup
-  
+const Chinese = ({word}) => {
   return (
-    <></>
+    <div className='chinese'>
+      {word}
+    </div>
   );
 };
 
