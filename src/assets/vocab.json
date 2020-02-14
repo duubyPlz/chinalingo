@@ -1,0 +1,382 @@
+[
+  {
+    "entries": [
+      {
+        "content": "\u518d\u898b",
+        "isFamiliar": false,
+        "module": "1"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "1"
+      },
+      {
+        "content": "\u4f60",
+        "isFamiliar": true,
+        "module": "1"
+      },
+      {
+        "content": "\u597d\n",
+        "isFamiliar": true,
+        "module": "1"
+      }
+    ],
+    "lesson": "1"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u53eb",
+        "isFamiliar": false,
+        "module": "3"
+      },
+      {
+        "content": "\u751a\u9ebd",
+        "isFamiliar": false,
+        "module": "3"
+      },
+      {
+        "content": "\u674e",
+        "isFamiliar": false,
+        "module": "3"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "3"
+      },
+      {
+        "content": "\u5f35",
+        "isFamiliar": true,
+        "module": "3"
+      },
+      {
+        "content": "\u83ef\n",
+        "isFamiliar": true,
+        "module": "3"
+      }
+    ],
+    "lesson": "3"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u9ad8\u8208",
+        "isFamiliar": false,
+        "module": "4"
+      },
+      {
+        "content": "\u8a8d\u8b58",
+        "isFamiliar": false,
+        "module": "4"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "4"
+      },
+      {
+        "content": "\u5230",
+        "isFamiliar": true,
+        "module": "4"
+      },
+      {
+        "content": "\u4e5f",
+        "isFamiliar": true,
+        "module": "4"
+      },
+      {
+        "content": "\u5f88\n",
+        "isFamiliar": true,
+        "module": "4"
+      }
+    ],
+    "lesson": "4"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u9eb5",
+        "isFamiliar": false,
+        "module": "5"
+      },
+      {
+        "content": "\u98ef",
+        "isFamiliar": false,
+        "module": "5"
+      },
+      {
+        "content": "\u8336",
+        "isFamiliar": false,
+        "module": "5"
+      },
+      {
+        "content": "\u559d",
+        "isFamiliar": false,
+        "module": "5"
+      },
+      {
+        "content": "\u5403",
+        "isFamiliar": false,
+        "module": "5"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "5"
+      },
+      {
+        "content": "\u9b5a",
+        "isFamiliar": true,
+        "module": "5"
+      },
+      {
+        "content": "\u5462\n",
+        "isFamiliar": true,
+        "module": "5"
+      }
+    ],
+    "lesson": "5"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u8001\u5e2b",
+        "isFamiliar": false,
+        "module": "6"
+      },
+      {
+        "content": "\u91ab\u751f",
+        "isFamiliar": false,
+        "module": "6"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "6"
+      },
+      {
+        "content": "\u5b78\u751f",
+        "isFamiliar": true,
+        "module": "6"
+      },
+      {
+        "content": "\u958b\u5fc3\n",
+        "isFamiliar": true,
+        "module": "6"
+      }
+    ],
+    "lesson": "6"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u96fb\u8a71",
+        "isFamiliar": false,
+        "module": "7"
+      },
+      {
+        "content": "\u865f\u78bc",
+        "isFamiliar": false,
+        "module": "7"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "7"
+      },
+      {
+        "content": "\u591a",
+        "isFamiliar": true,
+        "module": "7"
+      },
+      {
+        "content": "\u5c11\n",
+        "isFamiliar": true,
+        "module": "7"
+      }
+    ],
+    "lesson": "7"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u82f1",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "\u7f8e",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "\u90a3",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "\u5c0d",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "\u52a0\u62ff\u5927",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "\u90fd",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "8"
+      },
+      {
+        "content": "\u4e2d\u570b\n",
+        "isFamiliar": true,
+        "module": "8"
+      }
+    ],
+    "lesson": "8"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u5fd9",
+        "isFamiliar": false,
+        "module": "9"
+      },
+      {
+        "content": "\u65e9\u4e0a",
+        "isFamiliar": false,
+        "module": "9"
+      },
+      {
+        "content": "\u600e\u9ebd\u6a23\n",
+        "isFamiliar": false,
+        "module": "9"
+      }
+    ],
+    "lesson": "9"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u5317\u4eac",
+        "isFamiliar": false,
+        "module": "10"
+      },
+      {
+        "content": "\u7d10\u7d04",
+        "isFamiliar": false,
+        "module": "10"
+      },
+      {
+        "content": "\u9999\u6e2f",
+        "isFamiliar": false,
+        "module": "10"
+      },
+      {
+        "content": "\u88cf",
+        "isFamiliar": false,
+        "module": "10"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "10"
+      },
+      {
+        "content": "\u5bb6",
+        "isFamiliar": true,
+        "module": "10"
+      },
+      {
+        "content": "\u90a3\u88cf\n",
+        "isFamiliar": true,
+        "module": "10"
+      }
+    ],
+    "lesson": "10"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u8b1d",
+        "isFamiliar": false,
+        "module": "11"
+      },
+      {
+        "content": "\u5ba2\u6c23",
+        "isFamiliar": false,
+        "module": "11"
+      },
+      {
+        "content": "\u8d77",
+        "isFamiliar": false,
+        "module": "11"
+      },
+      {
+        "content": "\u6c92",
+        "isFamiliar": false,
+        "module": "11"
+      },
+      {
+        "content": "\u95dc\u4fc2",
+        "isFamiliar": false,
+        "module": "11"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "11"
+      },
+      {
+        "content": "\u5c0d\u4e0d\u8d77\n",
+        "isFamiliar": true,
+        "module": "11"
+      }
+    ],
+    "lesson": "11"
+  },
+  {
+    "entries": [
+      {
+        "content": "\u8ab0",
+        "isFamiliar": false,
+        "module": "12"
+      },
+      {
+        "content": "",
+        "isFamiliar": false,
+        "module": "12"
+      },
+      {
+        "content": "\u7238",
+        "isFamiliar": true,
+        "module": "12"
+      },
+      {
+        "content": "\u5abd",
+        "isFamiliar": true,
+        "module": "12"
+      },
+      {
+        "content": "\u611b",
+        "isFamiliar": true,
+        "module": "12"
+      },
+      {
+        "content": "\u500b\n",
+        "isFamiliar": true,
+        "module": "12"
+      }
+    ],
+    "lesson": "12"
+  }
+]

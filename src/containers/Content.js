@@ -10,7 +10,6 @@ const Content = ({isQuestion}) => {
     return (
       <>
         <Audio />
-        <English />
       </>
     );
   } else {
