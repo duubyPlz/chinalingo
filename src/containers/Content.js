@@ -21,7 +21,6 @@ const Content = ({isQuestion, dataPath}) => {
 
   // choose a random word from list
   const currentWord = "\u518d\u898b";
-  // const currentWord = "hello hi this is ";
 
   // Presentational fork:
   // if isquestion return either Audio or english or both

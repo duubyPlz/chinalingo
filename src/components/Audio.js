@@ -13,14 +13,13 @@ class Audio extends React.Component {
   initSpeech = () => {
     let speaker = new SpeechSynthesisUtterance();
     speaker.lang = 'zh-HK';
-    // speaker.lang = 'en-AU';
 
     return speaker;
   };
 
   speak = (text) => {
     this.state.speaker.text = text;
-    this.state.speaker.pitch = 2;
+    this.state.speaker.pitch = 1;
     this.state.speaker.rate = 0.5;
     window.speechSynthesis.speak(this.state.speaker);
   };
