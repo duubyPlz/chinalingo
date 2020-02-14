@@ -2,6 +2,7 @@
 
 import sys
 import json
+import re
 
 def parse_file(file_path):
     '''
@@ -86,19 +87,16 @@ def parse_file(file_path):
             unfamiliar = unfamString.split(WORD_DELIMITER)
             familiar = famString.split(WORD_DELIMITER)
 
-        for word in unfamiliar:
-            currentEntry = dict(module=lessonNum,
-                         content=word,
-                         isFamiliar=False)
-            currentLesson['entries'].append(currentEntry)
+        # Now, lesson.entries should be [...unfamiliar_entries, ...familiar_entries]
+        unfamiliar_entries = create_entries(lessonNum, unfamiliar, False)
+        familiar_entries = create_entries(lessonNum, familiar, True)
 
-        for word in familiar:
-            currentEntry = dict(module=lessonNum,
-                         content=word,
-                         isFamiliar=True)
-            currentLesson['entries'].append(currentEntry)
+        for entry in unfamiliar_entries:
+            currentLesson['entries'].append(entry)
 
-        # print("CURRENT LESSON: {}".format(currentLesson))
+        for entry in familiar_entries:
+            currentLesson['entries'].append(entry)
+
         glob.append(currentLesson)
     
     # print("GLOB: {}".format(glob))
@@ -106,6 +104,22 @@ def parse_file(file_path):
     vocab_file.close()
 
     return glob
+
+def create_entries(lessonNum, contentList, isFamiliar):
+    entries = []
+    for content in contentList:
+        word = content.strip()
+
+        if not word:
+            continue
+
+        currentEntry = dict(module=lessonNum,
+                        content=word,
+                        isFamiliar=False)
+        print("{}".format(currentEntry))
+        entries.append(currentEntry)
+    
+    return entries
 
 def get_json(glob):
     '''
@@ -123,10 +137,11 @@ def create_new_file(json, new_file_name):
     new_file.close()
 
 def run(file_path, new_file_name):
-    glob = parse_file(file_path)
-    jsonText = get_json(glob)
-
     print("== Output file: {} ==".format(new_file_name))
+    print(" > parsing...")
+    glob = parse_file(file_path)
+    print("\n> converting to json...")
+    jsonText = get_json(glob)
     print("== Generated the following json content: ==\n{}".format(jsonText))
 
     create_new_file(jsonText, new_file_name)
