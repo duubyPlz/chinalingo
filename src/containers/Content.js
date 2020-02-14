@@ -5,48 +5,79 @@ import Chinese from '../components/Chinese';
 
 import vocabList from '../assets/vocab.json';
 
-const Content = ({isQuestion, dataPath}) => {
-  const flatten = (list) => {
-    return list.map((lesson) => {
-      // in this lesson, concat
-      return lesson.entries.map((entry) => {
-        return entry;
-      });
-    });
-  };
+class Content extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const getRandomEntry = () => {
-    const flattenedList = flatten(vocabList);
-    const currentIndex = getRandomIndex(flattenedList.length);
+    // init state's current entry
+    const entry = this.getRandomEntry();
+    this.state = {
+      currentEntry: entry
+    };
+  }
+
+  getRandomEntry = () => {
+    const flattenedList = this.flatten(vocabList);
+    const currentIndex = this.getRandomIndex(flattenedList.length);
     return flattenedList[currentIndex];
   };
 
-  const getRandomIndex = (size) => {
+  flatten = (list) => {
+    // [
+    //   {
+    //     "entries": [
+    //       {
+    //         "isFamiliar": false,
+    //         "module": "1",
+    //         "content": "\u518d\u898b"
+    //       },
+    //       {
+    //         "isFamiliar": false,
+    //         "module": "1",
+    //         "content": "\u4f60"
+    //       },
+    //       {
+    //         "isFamiliar": false,
+    //         "module": "1",
+    //         "content": "\u597d"
+    //       }
+    //     ],
+    //     "lesson": "1"
+    //   },
+    
+    const flattenedList = [];
+
+    for (const lesson of list) {
+      for (const entry of lesson.entries) {
+        flattenedList.push(entry);
+      }
+    }
+
+    return flattenedList;
+  };
+
+  getRandomIndex = (size) => {
     let min = 0;
     let max = size;
 
-    return min + (Math.random() * (max - min));
+    return Math.floor(min + (Math.random() * (max - min)));
   };
 
-  // choose a random word from list
-  // const currentWord = "\u518d\u898b";
-  const currentEntry = getRandomEntry();
-
-  // Presentational fork:
-  // if isquestion return either Audio or english or both
-  if (isQuestion) {
-    return (
-      <>
-        <Audio entry={currentEntry} />
-      </>
-    );
-  } else {
-    // else is answer - return chinese
-    return (
-      <>
-        <Chinese word={currentEntry.content} />
-      </>
-    );
+  render() {
+    if (this.props.isQuestion) {
+      return (
+        <>
+          <Audio entry={this.state.currentEntry} />
+        </>
+      );
+    } else {
+      // else is answer - return chinese
+      return (
+        <>
+          <Chinese word={this.state.currentEntry.content} />
+        </>
+      );
+    }
   }
 }
 
