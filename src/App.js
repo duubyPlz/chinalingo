@@ -16,7 +16,7 @@ class App extends React.Component {
       isFamiliar: false
     };
 
-    this.handleToggleFamiliar = this.handleToggleFamiliar.bind(this);
+    this.handleSetFamiliar = this.handleSetFamiliar.bind(this);
   }
 
   dataPath = "./assets/vocab.json";
@@ -40,9 +40,9 @@ class App extends React.Component {
     this.toggleIsQuestion();
   };
 
-  handleToggleFamiliar = () => {
+  handleSetFamiliar = (checked) => {
     this.setState({
-      isFamiliar: !this.state.isFamiliar
+      isFamiliar: checked
     });
   };
 
@@ -55,7 +55,7 @@ class App extends React.Component {
           dataPath={this.dataPath}
         />
         <Footer isQuestion={this.state.isQuestion} />
-        <Settings toggleFamiliar={this.handleToggleFamiliar} />
+        <Settings setFamiliar={this.handleSetFamiliar} />
       </>
     );
   }

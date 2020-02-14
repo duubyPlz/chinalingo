@@ -17,7 +17,6 @@ class Content extends React.Component {
 
   getRandomEntry = () => {
     // const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
-    const derp = this.state;
     const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
     const currentIndex = this.getRandomIndex(flattenedList.length);
     return flattenedList[currentIndex];
@@ -75,6 +74,8 @@ class Content extends React.Component {
     });
   }
 
+  // https://alligator.io/react/get-derived-state/
+  // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
   componentWillReceiveProps(nextProps) {
     // TODO handle nextProps.isFamiliar change, re-grab a new entry
 
@@ -100,6 +101,7 @@ class Content extends React.Component {
       return (
         <>
           <Audio entry={this.state.currentEntry} />
+          familiar: {this.state.isFamiliar.toString()}
         </>
       );
     } else {
@@ -107,6 +109,7 @@ class Content extends React.Component {
       return (
         <>
           <Chinese word={this.state.currentEntry.content} />
+          familiar: {this.state.isFamiliar.toString()}
         </>
       );
     }
