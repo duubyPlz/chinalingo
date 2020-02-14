@@ -1,7 +1,7 @@
 button {
-  height: 3rem;
+  min-height: 3rem;
   min-width: 3rem;
-  width: 3rem; /* cos icon */
+  background-color: #ccc;
 
   border: none;
   border-radius: 30px;
@@ -12,6 +12,11 @@ button {
   cursor: pointer;
   
   transition: .15s ease-in-out;
+}
+
+button.large {
+  padding: 30px;
+  border-radius: 200px;
 }
 
 button.primary {

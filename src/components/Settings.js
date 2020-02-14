@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 
 import './Settings.css';
+import optionsIcon from '../assets/options.png';
 
 // https://codepen.io/finnhvman/pen/pOeyjE
 
@@ -68,7 +69,7 @@ class Settings extends React.Component {
           className='toggle-settings primary'
           onClick={this.handleToggleVisible.bind(this)}
         >
-          &#x2699;
+          <img src={optionsIcon} style={{width: 20}}/>
         </button>
       </>
     );

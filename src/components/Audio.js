@@ -1,4 +1,5 @@
 import React from 'react';
+import megaphoneIcon from '../assets/megaphone.png';
 
 class Audio extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class Audio extends React.Component {
     return (
       <div className='audio'>
         module: {this.module}
-        &#x1f50a;
+        <img src={megaphoneIcon} style={{width:100}} />
       </div>
     );
   }
