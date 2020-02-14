@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default () => {
+const Chinese = ({vocabList}) => {
+  // use vocabList as a hash to lookup
+  
   return (
-    <>
-    chinese
-    </>
+    <></>
   );
 };
+
+export default Chinese;

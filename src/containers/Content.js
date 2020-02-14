@@ -1,22 +1,26 @@
 import React from 'react';
 
 import Audio from '../components/Audio';
-import English from '../components/English';
 import Chinese from '../components/Chinese';
 
-const Content = ({isQuestion}) => {
+import vocabList from '../assets/vocab.json';
+
+const Content = ({isQuestion, dataPath}) => {
+  // Can filter vocabList by lesson
+
+  // Presentational fork:
   // if isquestion return either Audio or english or both
   if (isQuestion) {
     return (
       <>
-        <Audio />
+        <Audio vocabList={vocabList} />
       </>
     );
   } else {
     // else is answer - return chinese
     return (
       <>
-        <Chinese />
+        <Chinese vocabList={vocabList} />
       </>
     );
   }

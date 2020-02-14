@@ -15,6 +15,8 @@ class App extends React.Component {
     };
   }
 
+  dataPath = "./assets/vocab.json";
+
   componentDidMount() {
     window.addEventListener('keyup', this.handleKeyPress);
     window.addEventListener('click', this.handleClick);
@@ -39,6 +41,7 @@ class App extends React.Component {
       <>
         <Content 
           isQuestion={this.state.isQuestion}
+          dataPath={this.dataPath}
         />
         <Footer isQuestion={this.state.isQuestion} />
       </>
