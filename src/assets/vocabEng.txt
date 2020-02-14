@@ -1,6 +1,6 @@
 1: goodbye [you good
-3: call what(obj) Lee [Cheung Wah
-4: happy(formal) know [arrive too very
+3: call what Lee [Cheung Wah
+4: happy(formal) recognise-know [arrive too very
 5: noodles rice tea drink eat [fish rhetorical-question
 6: teacher doctor [student happy(spoken)
 7: phone number [more less
