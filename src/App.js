@@ -32,11 +32,16 @@ class App extends React.Component {
     });
   }
 
-  handleKeyPress = () => {
+  handleKeyPress = (event) => {
     this.toggleIsQuestion();
   };
 
-  handleClick = () => {
+  handleClick = (event) => {
+    const tagName = event.target.tagName;
+    if (tagName !== 'BODY' && tagName !== 'DIV') {
+      return;
+    }
+
     this.toggleIsQuestion();
   };
 

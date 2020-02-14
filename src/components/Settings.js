@@ -8,15 +8,22 @@ const Settings = ({setFamiliar}) => {
   let checkboxValue = useRef(null);
 
   return (
-    <label className="pure-material-switch">
-      <input
-        type="checkbox"
-        ref={checkboxValue}
-        onChange={() => {
-          setFamiliar(checkboxValue.current.checked);
-        }} />
-      <span></span>
-    </label>
+    <>
+      <div className='settings'>
+        <label className="switch" id='switch-familiar'>
+          <input
+            type="checkbox"
+            ref={checkboxValue}
+            onChange={() => {
+              setFamiliar(checkboxValue.current.checked);
+            }} />
+          <span>familiar</span>
+        </label>
+      </div>
+      <button className='toggle-settings'>
+        &#x2699;
+      </button>
+    </>
   );
 };
 

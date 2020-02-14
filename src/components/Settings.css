@@ -1,4 +1,4 @@
-.pure-material-switch {
+.switch {
   /* z-index: 0; */
   position: relative;
   display: inline-block;
@@ -9,7 +9,7 @@
 }
 
 /* Input */
-.pure-material-switch > input {
+.switch > input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -31,14 +31,14 @@
 }
 
 /* Span */
-.pure-material-switch > span {
+.switch > span {
   display: inline-block;
   width: 100%;
   cursor: pointer;
 }
 
 /* Track */
-.pure-material-switch > span::before {
+.switch > span::before {
   content: "";
   float: right;
   display: inline-block;
@@ -52,7 +52,7 @@
 }
 
 /* Thumb */
-.pure-material-switch > span::after {
+.switch > span::after {
   content: "";
   position: absolute;
   top: 2px;
@@ -66,63 +66,63 @@
 }
 
 /* Checked */
-.pure-material-switch > input:checked {
+.switch > input:checked {
   right: -10px;
   background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
 }
 
-.pure-material-switch > input:checked + span::before {
+.switch > input:checked + span::before {
   background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.6);
 }
 
-.pure-material-switch > input:checked + span::after {
+.switch > input:checked + span::after {
   background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
   transform: translateX(16px);
 }
 
 /* Hover, Focus */
-.pure-material-switch:hover > input {
+.switch:hover > input {
   opacity: 0.04;
 }
 
-.pure-material-switch > input:focus {
+.switch > input:focus {
   opacity: 0.12;
 }
 
-.pure-material-switch:hover > input:focus {
+.switch:hover > input:focus {
   opacity: 0.16;
 }
 
 /* Active */
-.pure-material-switch > input:active {
+.switch > input:active {
   opacity: 1;
   transform: scale(0);
   transition: transform 0s, opacity 0s;
 }
 
-.pure-material-switch > input:active + span::before {
+.switch > input:active + span::before {
   background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.6);
 }
 
-.pure-material-switch > input:checked:active + span::before {
+.switch > input:checked:active + span::before {
   background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
 }
 
 /* Disabled */
-.pure-material-switch > input:disabled {
+.switch > input:disabled {
   opacity: 0;
 }
 
-.pure-material-switch > input:disabled + span {
+.switch > input:disabled + span {
   color: rgb(var(--pure-material-onsurface-rgb, 0, 0, 0));
   opacity: 0.38;
   cursor: default;
 }
 
-.pure-material-switch > input:disabled + span::before {
+.switch > input:disabled + span::before {
   background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
 }
 
-.pure-material-switch > input:checked:disabled + span::before {
+.switch > input:checked:disabled + span::before {
   background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.6);
 }
