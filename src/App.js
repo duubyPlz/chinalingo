@@ -11,7 +11,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      isQuestion: true
+      isQuestion: true,
+      // isFamiliar: false
+      isFamiliar: true
     };
   }
 
@@ -40,6 +42,7 @@ class App extends React.Component {
     return (
       <>
         <Content 
+          isFamiliar={this.state.isFamiliar}
           isQuestion={this.state.isQuestion}
           dataPath={this.dataPath}
         />

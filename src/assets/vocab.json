@@ -1,332 +1,332 @@
 [
   {
+    "lesson": "1",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u518d\u898b",
         "module": "1",
-        "content": "\u518d\u898b"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u4f60",
         "module": "1",
-        "content": "\u4f60"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u597d",
         "module": "1",
-        "content": "\u597d"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "1"
+    ]
   },
   {
+    "lesson": "3",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u53eb",
         "module": "3",
-        "content": "\u53eb"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u751a\u9ebd",
         "module": "3",
-        "content": "\u751a\u9ebd"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u674e",
         "module": "3",
-        "content": "\u674e"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5f35",
         "module": "3",
-        "content": "\u5f35"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u83ef",
         "module": "3",
-        "content": "\u83ef"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "3"
+    ]
   },
   {
+    "lesson": "4",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u9ad8\u8208",
         "module": "4",
-        "content": "\u9ad8\u8208"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u8a8d\u8b58",
         "module": "4",
-        "content": "\u8a8d\u8b58"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5230",
         "module": "4",
-        "content": "\u5230"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u4e5f",
         "module": "4",
-        "content": "\u4e5f"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u5f88",
         "module": "4",
-        "content": "\u5f88"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "4"
+    ]
   },
   {
+    "lesson": "5",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u9eb5",
         "module": "5",
-        "content": "\u9eb5"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u98ef",
         "module": "5",
-        "content": "\u98ef"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u8336",
         "module": "5",
-        "content": "\u8336"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u559d",
         "module": "5",
-        "content": "\u559d"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5403",
         "module": "5",
-        "content": "\u5403"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u9b5a",
         "module": "5",
-        "content": "\u9b5a"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u5462",
         "module": "5",
-        "content": "\u5462"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "5"
+    ]
   },
   {
+    "lesson": "6",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u8001\u5e2b",
         "module": "6",
-        "content": "\u8001\u5e2b"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u91ab\u751f",
         "module": "6",
-        "content": "\u91ab\u751f"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5b78\u751f",
         "module": "6",
-        "content": "\u5b78\u751f"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u958b\u5fc3",
         "module": "6",
-        "content": "\u958b\u5fc3"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "6"
+    ]
   },
   {
+    "lesson": "7",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u96fb\u8a71",
         "module": "7",
-        "content": "\u96fb\u8a71"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u865f\u78bc",
         "module": "7",
-        "content": "\u865f\u78bc"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u591a",
         "module": "7",
-        "content": "\u591a"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u5c11",
         "module": "7",
-        "content": "\u5c11"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "7"
+    ]
   },
   {
+    "lesson": "8",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u82f1",
         "module": "8",
-        "content": "\u82f1"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u7f8e",
         "module": "8",
-        "content": "\u7f8e"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u90a3",
         "module": "8",
-        "content": "\u90a3"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5c0d",
         "module": "8",
-        "content": "\u5c0d"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u52a0\u62ff\u5927",
         "module": "8",
-        "content": "\u52a0\u62ff\u5927"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u90fd",
         "module": "8",
-        "content": "\u90fd"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u4e2d\u570b",
         "module": "8",
-        "content": "\u4e2d\u570b"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "8"
+    ]
   },
   {
+    "lesson": "9",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u5fd9",
         "module": "9",
-        "content": "\u5fd9"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u65e9\u4e0a",
         "module": "9",
-        "content": "\u65e9\u4e0a"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u600e\u9ebd\u6a23",
         "module": "9",
-        "content": "\u600e\u9ebd\u6a23"
+        "isFamiliar": false
       }
-    ],
-    "lesson": "9"
+    ]
   },
   {
+    "lesson": "10",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u5317\u4eac",
         "module": "10",
-        "content": "\u5317\u4eac"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u7d10\u7d04",
         "module": "10",
-        "content": "\u7d10\u7d04"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u9999\u6e2f",
         "module": "10",
-        "content": "\u9999\u6e2f"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u88cf",
         "module": "10",
-        "content": "\u88cf"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5bb6",
         "module": "10",
-        "content": "\u5bb6"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u90a3\u88cf",
         "module": "10",
-        "content": "\u90a3\u88cf"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "10"
+    ]
   },
   {
+    "lesson": "11",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u8b1d",
         "module": "11",
-        "content": "\u8b1d"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5ba2\u6c23",
         "module": "11",
-        "content": "\u5ba2\u6c23"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u8d77",
         "module": "11",
-        "content": "\u8d77"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u6c92",
         "module": "11",
-        "content": "\u6c92"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u95dc\u4fc2",
         "module": "11",
-        "content": "\u95dc\u4fc2"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u5c0d\u4e0d\u8d77",
         "module": "11",
-        "content": "\u5c0d\u4e0d\u8d77"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "11"
+    ]
   },
   {
+    "lesson": "12",
     "entries": [
       {
-        "isFamiliar": false,
+        "content": "\u8ab0",
         "module": "12",
-        "content": "\u8ab0"
+        "isFamiliar": false
       },
       {
-        "isFamiliar": false,
+        "content": "\u7238",
         "module": "12",
-        "content": "\u7238"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u5abd",
         "module": "12",
-        "content": "\u5abd"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u611b",
         "module": "12",
-        "content": "\u611b"
+        "isFamiliar": true
       },
       {
-        "isFamiliar": false,
+        "content": "\u500b",
         "module": "12",
-        "content": "\u500b"
+        "isFamiliar": true
       }
-    ],
-    "lesson": "12"
+    ]
   }
 ]

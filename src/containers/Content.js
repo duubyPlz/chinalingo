@@ -17,39 +17,43 @@ class Content extends React.Component {
   }
 
   getRandomEntry = () => {
-    const flattenedList = this.flatten(vocabList);
+    const flattenedList = this.flatten(vocabList, this.props.isFamiliar);
     const currentIndex = this.getRandomIndex(flattenedList.length);
     return flattenedList[currentIndex];
   };
 
-  flatten = (list) => {
-    // [
-    //   {
-    //     "entries": [
-    //       {
-    //         "isFamiliar": false,
-    //         "module": "1",
-    //         "content": "\u518d\u898b"
-    //       },
-    //       {
-    //         "isFamiliar": false,
-    //         "module": "1",
-    //         "content": "\u4f60"
-    //       },
-    //       {
-    //         "isFamiliar": false,
-    //         "module": "1",
-    //         "content": "\u597d"
-    //       }
-    //     ],
-    //     "lesson": "1"
-    //   },
+  flatten = (list, isFamiliar) => {
+    /*
+    [
+      {
+        "entries": [
+          {
+            "isFamiliar": false,
+            "module": "1",
+            "content": "\u518d\u898b"
+          },
+          {
+            "isFamiliar": false,
+            "module": "1",
+            "content": "\u4f60"
+          },
+          {
+            "isFamiliar": false,
+            "module": "1",
+            "content": "\u597d"
+          }
+        ],
+        "lesson": "1"
+      },
+    */
     
     const flattenedList = [];
 
     for (const lesson of list) {
       for (const entry of lesson.entries) {
-        flattenedList.push(entry);
+        if (entry.isFamiliar === isFamiliar) {
+          flattenedList.push(entry);
+        }
       }
     }
 

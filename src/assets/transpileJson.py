@@ -115,7 +115,7 @@ def create_entries(lessonNum, contentList, isFamiliar):
 
         currentEntry = dict(module=lessonNum,
                         content=word,
-                        isFamiliar=False)
+                        isFamiliar=isFamiliar)
         print("{}".format(currentEntry))
         entries.append(currentEntry)
     
