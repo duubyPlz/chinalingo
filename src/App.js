@@ -1,0 +1,49 @@
+import React from "react";
+
+import Content from './containers/Content';
+import Footer from './components/Footer';
+
+// Local state:
+// question or answer (like flashcard front or back)
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isQuestion: true
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('keyup', this.handleKeyPress);
+    window.addEventListener('click', this.handleClick);
+  }
+
+  toggleIsQuestion = () => {
+    this.setState({
+      isQuestion: !this.state.isQuestion
+    });
+  }
+
+  handleKeyPress = () => {
+    this.toggleIsQuestion();
+  };
+
+  handleClick = () => {
+    this.toggleIsQuestion();
+  };
+
+  render() {
+    return (
+      <>
+        <Content 
+          isQuestion={this.state.isQuestion}
+        />
+        <Footer isQuestion={this.state.isQuestion} />
+      </>
+    );
+  }
+}
+
+export default App;
