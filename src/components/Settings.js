@@ -47,6 +47,8 @@ class Settings extends React.Component {
   }
 
   render() {
+    // somehow link this.props.isFamiliar to input
+
     return (
       <>
         {
@@ -55,9 +57,11 @@ class Settings extends React.Component {
             <label className="switch" id='switch-familiar'>
               <input
                 type="checkbox"
+
+
                 ref={this.checkboxValue}
                 onChange={() => {
-                  setFamiliar(this.checkboxValue.current.checked);
+                  this.props.setFamiliar(this.checkboxValue.current.checked);
                 }} />
               <span>familiar</span>
             </label>

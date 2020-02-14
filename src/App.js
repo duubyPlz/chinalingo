@@ -67,7 +67,10 @@ class App extends React.Component {
           dataPath={this.dataPath}
         />
         <Footer isQuestion={this.state.isQuestion} />
-        <Settings setFamiliar={this.handleSetFamiliar} />
+        <Settings 
+          isFamiliar={this.state.isFamiliar}
+          setFamiliar={this.handleSetFamiliar}
+        />
       </>
     );
   }
