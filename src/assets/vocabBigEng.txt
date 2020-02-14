@@ -221,7 +221,7 @@ swimming
 car
 rice cooked
 appearance
-go
+go      CONTINUE HERE
 包
 出租車
 毛
