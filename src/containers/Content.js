@@ -9,15 +9,16 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
 
-    // init state's current entry
-    const entry = this.getRandomEntry();
     this.state = {
-      currentEntry: entry
+      currentEntry: {},
+      isFamiliar: props.isFamiliar
     };
   }
 
   getRandomEntry = () => {
-    const flattenedList = this.flatten(vocabList, this.props.isFamiliar);
+    // const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
+    const derp = this.state;
+    const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
     const currentIndex = this.getRandomIndex(flattenedList.length);
     return flattenedList[currentIndex];
   };
@@ -67,7 +68,25 @@ class Content extends React.Component {
     return Math.floor(min + (Math.random() * (max - min)));
   };
 
+  componentDidMount() {
+    const entry = this.getRandomEntry();
+    this.setState({
+      currentEntry: entry
+    });
+  }
+
   componentWillReceiveProps(nextProps) {
+    // TODO handle nextProps.isFamiliar change, re-grab a new entry
+
+    if (nextProps.isFamiliar !== this.state.isFamiliar) {
+      const newEntry = this.getRandomEntry();
+
+      this.setState({
+        currentEntry: newEntry,
+        isFamiliar: nextProps.isFamiliar
+      });
+    }
+
     if (nextProps.isQuestion) {
       const newEntry = this.getRandomEntry();
       this.setState({

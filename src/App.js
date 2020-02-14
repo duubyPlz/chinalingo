@@ -2,6 +2,7 @@ import React from "react";
 
 import Content from './containers/Content';
 import Footer from './components/Footer';
+import Settings from './components/Settings';
 
 // Local state:
 // question or answer (like flashcard front or back)
@@ -12,9 +13,10 @@ class App extends React.Component {
 
     this.state = {
       isQuestion: true,
-      // isFamiliar: false
-      isFamiliar: true
+      isFamiliar: false
     };
+
+    this.handleToggleFamiliar = this.handleToggleFamiliar.bind(this);
   }
 
   dataPath = "./assets/vocab.json";
@@ -38,6 +40,12 @@ class App extends React.Component {
     this.toggleIsQuestion();
   };
 
+  handleToggleFamiliar = () => {
+    this.setState({
+      isFamiliar: !this.state.isFamiliar
+    });
+  };
+
   render() {
     return (
       <>
@@ -47,6 +55,7 @@ class App extends React.Component {
           dataPath={this.dataPath}
         />
         <Footer isQuestion={this.state.isQuestion} />
+        <Settings toggleFamiliar={this.handleToggleFamiliar} />
       </>
     );
   }
