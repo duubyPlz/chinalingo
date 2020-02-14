@@ -28,7 +28,12 @@
         "isFamiliar": false
       },
       {
-        "content": "\u751a\u9ebd",
+        "content": "\u751a",
+        "module": "3",
+        "isFamiliar": false
+      },
+      {
+        "content": "\u9ebd",
         "module": "3",
         "isFamiliar": false
       },
@@ -223,9 +228,19 @@
         "isFamiliar": false
       },
       {
-        "content": "\u600e\u9ebd\u6a23",
+        "content": "\u600e",
         "module": "9",
         "isFamiliar": false
+      },
+      {
+        "content": "\u6a23",
+        "module": "9",
+        "isFamiliar": false
+      },
+      {
+        "content": "\u600e\u9ebd\u6a23",
+        "module": "9",
+        "isFamiliar": true
       }
     ]
   },
