@@ -1,0 +1,32 @@
+button {
+  height: 3rem;
+  min-width: 3rem;
+  width: 3rem; /* cos icon */
+
+  border: none;
+  border-radius: 30px;
+
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  
+  transition: .15s ease-in-out;
+}
+
+button.primary {
+  background-color: #f96332;
+  color: #fff;
+}
+
+button.primary:hover,
+button.primary:active {
+  background-color: #fa7a50;
+  color: #fff;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+}
+
+/* remove chrome blue ring */
+button:focus {
+  outline: 0;
+}

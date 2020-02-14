@@ -35,6 +35,8 @@ class Settings extends React.Component {
   };
 
   // TODO v don't need this? v
+  // https://advancedweb.hu/global-listener-patterns-in-react/
+  // https://hackernoon.com/do-you-still-register-window-event-listeners-in-each-component-react-in-example-31a4b1f6f1c8
   componentDidMount() {
     window.addEventListener('click', this.handleClick);
   }
@@ -63,7 +65,7 @@ class Settings extends React.Component {
         }
 
         <button
-          className='toggle-settings'
+          className='toggle-settings primary'
           onClick={this.handleToggleVisible.bind(this)}
         >
           &#x2699;

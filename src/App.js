@@ -4,6 +4,8 @@ import Content from './containers/Content';
 import Footer from './components/Footer';
 import Settings from './components/Settings';
 
+import './App.css';
+
 // Local state:
 // question or answer (like flashcard front or back)
 

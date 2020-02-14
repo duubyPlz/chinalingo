@@ -1,5 +1,11 @@
+.toggle-settings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* + Switch */
 .switch {
-  /* z-index: 0; */
   position: relative;
   display: inline-block;
   color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
@@ -8,12 +14,10 @@
   line-height: 1.5;
 }
 
-/* Input */
 .switch > input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  /* z-index: -1; */
   position: absolute;
   right: 6px;
   top: -8px;
@@ -30,14 +34,12 @@
   transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
 }
 
-/* Span */
 .switch > span {
   display: inline-block;
   width: 100%;
   cursor: pointer;
 }
 
-/* Track */
 .switch > span::before {
   content: "";
   float: right;
@@ -51,7 +53,6 @@
   transition: background-color 0.2s, opacity 0.2s;
 }
 
-/* Thumb */
 .switch > span::after {
   content: "";
   position: absolute;
@@ -65,7 +66,6 @@
   transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Checked */
 .switch > input:checked {
   right: -10px;
   background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
@@ -80,7 +80,6 @@
   transform: translateX(16px);
 }
 
-/* Hover, Focus */
 .switch:hover > input {
   opacity: 0.04;
 }
@@ -93,7 +92,6 @@
   opacity: 0.16;
 }
 
-/* Active */
 .switch > input:active {
   opacity: 1;
   transform: scale(0);
@@ -108,7 +106,6 @@
   background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
 }
 
-/* Disabled */
 .switch > input:disabled {
   opacity: 0;
 }
@@ -126,3 +123,5 @@
 .switch > input:checked:disabled + span::before {
   background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.6);
 }
+
+/* - Switch */
