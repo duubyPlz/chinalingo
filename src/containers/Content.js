@@ -63,6 +63,15 @@ class Content extends React.Component {
     return Math.floor(min + (Math.random() * (max - min)));
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isQuestion) {
+      const newEntry = this.getRandomEntry();
+      this.setState({
+        currentEntry: newEntry
+      });
+    }
+  }
+
   render() {
     if (this.props.isQuestion) {
       return (
