@@ -4,6 +4,9 @@ class Audio extends React.Component {
   constructor(props) {
     super(props);
 
+    this.word = props.entry.content;
+    this.module = props.entry.module;
+
     const ssu = this.initSpeech(); 
     this.state = {
       speaker: ssu
@@ -25,14 +28,15 @@ class Audio extends React.Component {
   };
 
   componentDidMount() {
-    if (this.state.speaker && this.props.word) {
-      this.speak(this.props.word);
+    if (this.state.speaker && this.word) {
+      this.speak(this.word);
     }
   }
 
   render() {
     return (
       <div className='audio'>
+        module: {this.module}
         &#x1f50a;
       </div>
     );

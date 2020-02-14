@@ -10,31 +10,41 @@ const Content = ({isQuestion, dataPath}) => {
     return list.map((lesson) => {
       // in this lesson, concat
       return lesson.entries.map((entry) => {
-        return (
-          <div>{entry.content}</div>
-        );
+        return entry;
       });
     });
   };
 
-  // const flattenedList = flatten(vocabList);
+  const getRandomEntry = () => {
+    const flattenedList = flatten(vocabList);
+    const currentIndex = getRandomIndex(flattenedList.length);
+    return flattenedList[currentIndex];
+  };
+
+  const getRandomIndex = (size) => {
+    let min = 0;
+    let max = size;
+
+    return min + (Math.random() * (max - min));
+  };
 
   // choose a random word from list
-  const currentWord = "\u518d\u898b";
+  // const currentWord = "\u518d\u898b";
+  const currentEntry = getRandomEntry();
 
   // Presentational fork:
   // if isquestion return either Audio or english or both
   if (isQuestion) {
     return (
       <>
-        <Audio word={currentWord} />
+        <Audio entry={currentEntry} />
       </>
     );
   } else {
     // else is answer - return chinese
     return (
       <>
-        <Chinese word={currentWord} />
+        <Chinese word={currentEntry.content} />
       </>
     );
   }
