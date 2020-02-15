@@ -15,13 +15,6 @@ class Content extends React.Component {
     };
   }
 
-  getRandomEntry = () => {
-    // const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
-    const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
-    const currentIndex = this.getRandomIndex(flattenedList.length);
-    return flattenedList[currentIndex];
-  };
-
   flatten = (list, isFamiliar) => {
     /*
     [
@@ -60,15 +53,57 @@ class Content extends React.Component {
     return flattenedList;
   };
 
+  getRandomEntry = () => {
+    // const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
+    const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
+    const currentIndex = this.getRandomIndex(flattenedList.length);
+    return flattenedList[currentIndex];
+  };
+
   getRandomIndex = (size) => {
     let min = 0;
     let max = size;
+    return this.getRandomNumber(min, max);
+  };
 
+  getRandomNumber = (min, max) => {
     return Math.floor(min + (Math.random() * (max - min)));
   };
 
+  // TODO make this use `.done` instead of infinite
+  // every time generator function is called, check if .done
+  // need to make a third component (not just front & back flash card sides), render that when .done
+  * genNextEntry() {
+    const shuffleList = (list) => {
+      // knuth/fisher-yates shuffle
+      for (let i=list.length-1; i>0; i--) {
+        const min = 0;
+        let max = i;
+        let j = this.getRandomNumber(min, max);
+
+        // swap list[i] and list[j]
+        let temp = list[i];
+        list[i] = list[j];
+        list[j] = temp;
+      }
+    };
+
+    const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
+
+    while (true) {
+      // randomise
+      const shuffledList = shuffleList(flattenedList);
+
+      // spit out entries one by one
+      for (const entry of shuffledList) {
+        yield entry;
+      }
+    }
+  };
+
   componentDidMount() {
-    const entry = this.getRandomEntry();
+    // const entry = this.getRandomEntry();
+    const entry = this.genNextEntry();
     this.setState({
       currentEntry: entry
     });
@@ -80,7 +115,8 @@ class Content extends React.Component {
     // TODO handle nextProps.isFamiliar change, re-grab a new entry
 
     if (nextProps.isFamiliar !== this.state.isFamiliar) {
-      const newEntry = this.getRandomEntry();
+      // const newEntry = this.getRandomEntry();
+      const newEntry = this.genNextEntry();
 
       this.setState({
         currentEntry: newEntry,
