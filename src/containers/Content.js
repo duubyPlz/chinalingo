@@ -3,7 +3,7 @@ import React from 'react';
 import Audio from '../components/Audio';
 import Chinese from '../components/Chinese';
 
-import vocabList from '../assets/vocab.json';
+import vocabList from '../assets/test.json';
 
 class Content extends React.Component {
   constructor(props) {
@@ -92,10 +92,10 @@ class Content extends React.Component {
 
     while (true) {
       // randomise
-      const shuffledList = shuffleList(flattenedList);
+      let shuffledList = shuffleList(flattenedList);
 
       // spit out entries one by one
-      for (const entry of shuffledList) {
+      for (let entry of shuffledList) {
         yield entry;
       }
     }

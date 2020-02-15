@@ -147,7 +147,9 @@ def run(file_path, new_file_name):
     create_new_file(jsonText, new_file_name)
 
 if __name__ == "__main__":
-    vocab_file_path = "./vocab.txt"
-    new_file_name = "vocab.json"
+    # vocab_file_path = "./vocab.txt"
+    # new_file_name = "vocab.json"
+    vocab_file_path = "./test.txt"
+    new_file_name = "test.json"
     run(vocab_file_path, new_file_name)
 

@@ -21,8 +21,6 @@ class App extends React.Component {
     this.handleSetFamiliar = this.handleSetFamiliar.bind(this);
   }
 
-  dataPath = "./assets/vocab.json";
-
   componentDidMount() {
     window.addEventListener('keyup', this.handleKeyPress);
     window.addEventListener('click', this.handleClick);
@@ -64,7 +62,6 @@ class App extends React.Component {
         <Content 
           isFamiliar={this.state.isFamiliar}
           isQuestion={this.state.isQuestion}
-          dataPath={this.dataPath}
         />
         <Footer isQuestion={this.state.isQuestion} />
         <Settings 
