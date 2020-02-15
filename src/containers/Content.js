@@ -9,8 +9,13 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
 
+    // const entry = this.getRandomEntry();
+    // const entryGenerator = this.genNextEntry.call(this, this.state.isFamiliar);
+    const entryGenerator = this.genNextEntry(props.isFamiliar, this.flatten, this.getRandomNumber);
+    const entry = entryGenerator.next().value;
     this.state = {
-      currentEntry: {},
+      entryGenerator: entryGenerator,
+      currentEntry: entry,
       isFamiliar: props.isFamiliar
     };
   }
@@ -102,17 +107,6 @@ class Content extends React.Component {
       }
     }
   };
-
-  componentDidMount() {
-    // const entry = this.getRandomEntry();
-    // const entryGenerator = this.genNextEntry.call(this, this.state.isFamiliar);
-    const entryGenerator = this.genNextEntry(this.state.isFamiliar, this.flatten, this.getRandomNumber);
-    const entry = entryGenerator.next().value;
-    this.setState({
-      entryGenerator: entryGenerator,
-      currentEntry: entry
-    });
-  }
 
   // https://alligator.io/react/get-derived-state/
   // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
