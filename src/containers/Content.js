@@ -73,13 +73,13 @@ class Content extends React.Component {
   // TODO make this use `.done` instead of infinite
   // every time generator function is called, check if .done
   // need to make a third component (not just front & back flash card sides), render that when .done
-  * genNextEntry(isFamiliar) {
+  * genNextEntry(isFamiliar, flatten, getRandomNumber) {
     const shuffleList = (list) => {
       // knuth/fisher-yates shuffle
       for (let i=list.length-1; i>0; i--) {
         const min = 0;
         let max = i;
-        let j = this.getRandomNumber(min, max);
+        let j = getRandomNumber(min, max);
 
         // swap list[i] and list[j]
         let temp = list[i];
@@ -90,7 +90,7 @@ class Content extends React.Component {
       return list;
     };
 
-    const flattenedList = this.flatten(vocabList, isFamiliar);
+    const flattenedList = flatten(vocabList, isFamiliar);
 
     while (true) {
       // randomise
@@ -105,7 +105,8 @@ class Content extends React.Component {
 
   componentDidMount() {
     // const entry = this.getRandomEntry();
-    const entryGenerator = this.genNextEntry.call(this, this.state.isFamiliar);
+    // const entryGenerator = this.genNextEntry.call(this, this.state.isFamiliar);
+    const entryGenerator = this.genNextEntry(this.state.isFamiliar, this.flatten, this.getRandomNumber);
     const entry = entryGenerator.next().value;
     this.setState({
       entryGenerator: entryGenerator,
