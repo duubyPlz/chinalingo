@@ -142,6 +142,23 @@ class Content extends React.Component {
   }
 
 
+/*
+    <div>
+      list: 
+      <ul>
+      {
+        // TODO hide/show toggle this list
+        // TODO add stable IDs?
+        this.state.flattenedList.map((entry, index) =>
+        <li key={index}>
+            {entry.module} | {entry.content}
+          </li>
+        )
+      }
+      </ul>
+    </div>
+*/
+
   render() {
     return (
       <>
@@ -155,20 +172,6 @@ class Content extends React.Component {
           currentEntry={this.state.currentEntry}
           isFamiliar={this.state.isFamiliar}
          />
-        <div>
-          {/* todo make this look better, hide/show */}
-          list: 
-          <ul>
-          {
-            // TODO add stable IDs?
-            this.state.flattenedList.map((entry, index) =>
-            <li key={index}>
-                {entry.module} | {entry.content}
-              </li>
-            )
-          }
-          </ul>
-        </div>
       </>
     );
   }
