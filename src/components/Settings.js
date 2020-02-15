@@ -27,8 +27,14 @@ class Settings extends React.Component {
   };
 
   handleClick = (event) => {
+    if (!this.state.visible) {
+      return;
+    }
+    
     const tagName = event.target.tagName;
-    if (tagName !== 'BODY' && tagName !== 'DIV') {
+    if (tagName === 'IMG' ||
+        tagName === 'BUTTON' ||
+        tagName === 'SPAN') {
       return;
     }
 
@@ -63,17 +69,21 @@ class Settings extends React.Component {
                 onChange={() => {
                   this.props.setFamiliar(this.checkboxValue.current.checked);
                 }} />
-              <span>familiar</span>
+              <span className="switch-option">familiar</span>
             </label>
           </div>
           : null
         }
 
+        {/* FIXME button img: https://stackoverflow.com/questions/49891399/icon-inside-button-does-not-trigger-attached-function-on-react */}
         <button
           className='toggle-settings primary'
           onClick={this.handleToggleVisible.bind(this)}
         >
-          <img src={optionsIcon} style={{width: 20}}/>
+          <img
+            src={optionsIcon}
+            style={{width: 20}}
+          />
         </button>
       </>
     );

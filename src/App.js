@@ -43,7 +43,9 @@ class App extends React.Component {
 
   handleClick = (event) => {
     const tagName = event.target.tagName;
-    if (tagName !== 'BODY' && tagName !== 'DIV') {
+    if (tagName === 'IMG' ||
+        tagName === 'BUTTON' ||
+        tagName === 'SPAN') {
       return;
     }
 
