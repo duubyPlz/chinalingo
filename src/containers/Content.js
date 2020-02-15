@@ -3,7 +3,7 @@ import React from 'react';
 import Audio from '../components/Audio';
 import Chinese from '../components/Chinese';
 
-import vocabList from '../assets/test.json';
+import vocabList from '../assets/vocab.json';
 
 class Content extends React.Component {
   constructor(props) {
@@ -11,11 +11,16 @@ class Content extends React.Component {
 
     // const entry = this.getRandomEntry();
     // const entryGenerator = this.genNextEntry.call(this, this.state.isFamiliar);
-    const entryGenerator = this.genNextEntry(props.isFamiliar, this.flatten, this.getRandomNumber);
+
+    const flattenedList = this.flatten(vocabList, props.isFamiliar);
+
+    const entryGenerator = this.genNextEntry(flattenedList, this.getRandomNumber);
     const entry = entryGenerator.next().value;
     this.state = {
+      flattenedList: flattenedList,
       entryGenerator: entryGenerator,
-      currentEntry: entry,
+      currentEntry: entry.entry,
+      currentIndex: entry.index,
       isFamiliar: props.isFamiliar
     };
   }
@@ -59,9 +64,7 @@ class Content extends React.Component {
   };
 
   getRandomEntry = () => {
-    // const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
-    const flattenedList = this.flatten(vocabList, this.state.isFamiliar);
-    const currentIndex = this.getRandomIndex(flattenedList.length);
+    const currentIndex = this.getRandomIndex(this.state.flattenedList.length);
     return flattenedList[currentIndex];
   };
 
@@ -78,7 +81,8 @@ class Content extends React.Component {
   // TODO make this use `.done` instead of infinite
   // every time generator function is called, check if .done
   // need to make a third component (not just front & back flash card sides), render that when .done
-  * genNextEntry(isFamiliar, flatten, getRandomNumber) {
+  // https://www.aaron-powell.com/posts/2014-01-13-functions-that-yield-mutliple-times/
+  * genNextEntry(flattenedList, getRandomNumber) {
     const shuffleList = (list) => {
       // knuth/fisher-yates shuffle
       for (let i=list.length-1; i>0; i--) {
@@ -95,15 +99,18 @@ class Content extends React.Component {
       return list;
     };
 
-    const flattenedList = flatten(vocabList, isFamiliar);
-
     while (true) {
       // randomise
       let shuffledList = shuffleList(flattenedList);
 
       // spit out entries one by one
-      for (let entry of shuffledList) {
-        yield entry;
+      for (let i=0; i<shuffledList.length; i++) {
+        let wantedEntry = shuffledList[i];
+        // TODO maybe better way to do this:
+        yield {
+          entry: wantedEntry,
+          index: i
+        };
       }
     }
   };
@@ -118,7 +125,8 @@ class Content extends React.Component {
       const newEntry = this.state.entryGenerator.next().value;
 
       this.setState({
-        currentEntry: newEntry,
+        currentEntry: newEntry.entry,
+        currentIndex: newEntry.index,
         isFamiliar: nextProps.isFamiliar
       });
     }
@@ -127,29 +135,45 @@ class Content extends React.Component {
       // const newEntry = this.getRandomEntry();
       const newEntry = this.state.entryGenerator.next().value;
       this.setState({
-        currentEntry: newEntry
+        currentEntry: newEntry.entry,
+        currentIndex: newEntry.index,
       });
     }
   }
 
+
   render() {
-    if (this.props.isQuestion) {
-      return (
-        <>
-          <Audio entry={this.state.currentEntry} />
-          familiar: {this.state.isFamiliar.toString()}
-        </>
-      );
-    } else {
-      // else is answer - return chinese
-      return (
-        <>
-          <Chinese word={this.state.currentEntry.content} />
-          familiar: {this.state.isFamiliar.toString()}
-        </>
-      );
-    }
+    return (
+      <>
+        total: {this.state.flattenedList.length}
+        current: {this.state.currentIndex}
+        <CurrentModule 
+          isQuestion={this.props.isQuestion}
+          currentEntry={this.state.currentEntry}
+          isFamiliar={this.state.isFamiliar}
+         />
+      </>
+    );
   }
 }
+
+const CurrentModule = ({isQuestion, currentEntry, isFamiliar}) => {
+  if (isQuestion) {
+    return (
+      <>
+        <Audio entry={currentEntry} />
+        familiar: {isFamiliar.toString()}
+      </>
+    );
+  } else {
+    // else is answer - return chinese
+    return (
+      <>
+        <Chinese word={currentEntry.content} />
+        familiar: {isFamiliar.toString()}
+      </>
+    );
+  }
+};
 
 export default Content;
