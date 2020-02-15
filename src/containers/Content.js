@@ -145,13 +145,30 @@ class Content extends React.Component {
   render() {
     return (
       <>
-        total: {this.state.flattenedList.length}
-        current: {this.state.currentIndex}
+        <div>
+          {/* todo create progress bar */}
+          total: {this.state.flattenedList.length}
+          current: {this.state.currentIndex}
+        </div>
         <CurrentModule 
           isQuestion={this.props.isQuestion}
           currentEntry={this.state.currentEntry}
           isFamiliar={this.state.isFamiliar}
          />
+        <div>
+          {/* todo make this look better, hide/show */}
+          list: 
+          <ul>
+          {
+            // TODO add stable IDs?
+            this.state.flattenedList.map((entry, index) =>
+            <li key={index}>
+                {entry.module} | {entry.content}
+              </li>
+            )
+          }
+          </ul>
+        </div>
       </>
     );
   }
@@ -160,18 +177,18 @@ class Content extends React.Component {
 const CurrentModule = ({isQuestion, currentEntry, isFamiliar}) => {
   if (isQuestion) {
     return (
-      <>
+      <div>
         <Audio entry={currentEntry} />
         familiar: {isFamiliar.toString()}
-      </>
+      </div>
     );
   } else {
     // else is answer - return chinese
     return (
-      <>
+      <div>
         <Chinese word={currentEntry.content} />
         familiar: {isFamiliar.toString()}
-      </>
+      </div>
     );
   }
 };
