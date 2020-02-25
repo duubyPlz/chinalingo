@@ -5,10 +5,10 @@
 6: teacher doctor [student happy(spoken)
 7: phone number [more less
 8: eng amer which correct canada also [china
-9: busy morning how appearance [怎麽樣
+9: busy morning how appearance [how-is-it
 10: beijing new-york hong-kong inside [family where
 11: thanks customer-like rise not-have relationship [sorry
 12: who [dad mum love collective-noun-not-special
 13: ask way please [know
 h1: short peace quiet in-rows
-h2: sway/put class move-away half
+h2: put class move-away [half
