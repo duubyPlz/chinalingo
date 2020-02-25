@@ -3,6 +3,7 @@
 import sys
 import json
 import re
+import argparse
 
 def parse_file(file_path):
     '''
@@ -147,7 +148,18 @@ def run(file_path, new_file_name):
     create_new_file(jsonText, new_file_name)
 
 if __name__ == "__main__":
-    vocab_file_path = "./activeVocab.txt"
-    new_file_name = "vocab.json"
-    run(vocab_file_path, new_file_name)
+    parser = argparse.ArgumentParser(description='Transpile custom .txt format to .json')
+    parser.add_argument("-i",
+                        "--input",
+                        help="input .txt file",
+                        required=True)
+    parser.add_argument("-o",
+                        "--output",
+                        help="output .json file",
+                        required=True)
+    args = parser.parse_args()
 
+    vocab_file_path = args.input
+    new_file_name = args.output
+
+    run(vocab_file_path, new_file_name)
