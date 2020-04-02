@@ -10,6 +10,7 @@
 11: thanks customer-like rise not-have relationship [sorry
 12: who [dad mum love collective-noun-not-special
 13: ask way please [know
-h1: short peace quiet in-rows
+h1: short(height) peace quiet in-rows
 h2: put class move-away [half
-c1: time product/do then/come/go-to/near in/on/at/by/from result gathering produce animation
+c1: time product/do then/come/go-to/near in/on/at/by/from
+c2: result gathering produce animation
