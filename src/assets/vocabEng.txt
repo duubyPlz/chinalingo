@@ -13,4 +13,5 @@
 h1: short(height) peace quiet in-rows
 h2: put class move-away [half
 c1: time product/do then/come/go-to/near in/on/at/by/from
-c2: result gathering produce animation
+c2: result gathering dispatch/rise animation
+c3: cross-over say produce category
