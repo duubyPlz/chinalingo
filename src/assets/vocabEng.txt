@@ -6,7 +6,7 @@
 7: phone number [more less
 8: eng amer which correct canada also [china
 9: busy morning how appearance [how-is-it
-10: beijing new-york hong-kong inside [family where
+10: beijing new-york hong-kong inside london taiwan live [family where
 11: thanks customer-like rise not-have relationship [sorry
 12: who [dad mum love collective-noun-not-special
 13: ask way please [know
@@ -15,4 +15,4 @@ h2: put class move-away [half
 c1: time product/do then/come/go-to/near in/on/at/by/from
 c2: result gathering dispatch/rise animation
 c3: cross-over say produce category
-c4: also/nevertheless after/behind decide/definitely law location
+c4: and-yet/also after/behind decided/stable law location
