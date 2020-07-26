@@ -1,55 +1,5 @@
 [
   {
-    "lesson": "h1",
-    "entries": [
-      {
-        "module": "h1",
-        "content": "\u77ee",
-        "isFamiliar": false
-      },
-      {
-        "module": "h1",
-        "content": "\u5b89",
-        "isFamiliar": false
-      },
-      {
-        "module": "h1",
-        "content": "\u975c",
-        "isFamiliar": false
-      },
-      {
-        "module": "h1",
-        "content": "\u6392",
-        "isFamiliar": false
-      }
-    ]
-  },
-  {
-    "lesson": "h2",
-    "entries": [
-      {
-        "module": "h2",
-        "content": "\u64fa",
-        "isFamiliar": false
-      },
-      {
-        "module": "h2",
-        "content": "\u73ed",
-        "isFamiliar": false
-      },
-      {
-        "module": "h2",
-        "content": "\u642c",
-        "isFamiliar": false
-      },
-      {
-        "module": "h2",
-        "content": "\u534a",
-        "isFamiliar": true
-      }
-    ]
-  },
-  {
     "lesson": "c1",
     "entries": [
       {
@@ -150,6 +100,36 @@
       {
         "module": "c4",
         "content": "\u6240",
+        "isFamiliar": false
+      }
+    ]
+  },
+  {
+    "lesson": "c5",
+    "entries": [
+      {
+        "module": "c5",
+        "content": "\u6c11",
+        "isFamiliar": false
+      },
+      {
+        "module": "c5",
+        "content": "\u7d93",
+        "isFamiliar": false
+      },
+      {
+        "module": "c5",
+        "content": "\u9032",
+        "isFamiliar": false
+      },
+      {
+        "module": "c5",
+        "content": "\u7b49",
+        "isFamiliar": false
+      },
+      {
+        "module": "c5",
+        "content": "\u90e8",
         "isFamiliar": false
       }
     ]
